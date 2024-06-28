@@ -10,7 +10,11 @@ export class TypescriptComponent {
   // in javascript --> var a =0;
 
   // Variables start
+<<<<<<< HEAD
   name:string;
+=======
+  name:string='Growing Flowers';
+>>>>>>> 4423cf47ba256c32c73272d8d83c198dac849fa7
 
   num:number=10;
 
@@ -35,7 +39,10 @@ export class TypescriptComponent {
 
 
   constructor(){
+<<<<<<< HEAD
     this.name= "Growing flower";
+=======
+>>>>>>> 4423cf47ba256c32c73272d8d83c198dac849fa7
    this.callfunction();
    this.objectAccessing();
    this.arrayAccessing();
