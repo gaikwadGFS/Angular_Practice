@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class StudentComponent {
 
+  // result:number=0
+
+  constructor(){
+    this.square(5);
+  }
+
+  square(num:number){
+    let result = num*num ;
+    console.log(result); 
+  }
 }

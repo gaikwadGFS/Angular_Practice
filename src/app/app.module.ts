@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './components/student/student.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
 import { TypescriptComponent } from './components/typescript/typescript.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentComponent,
     TeacherComponent,
-    TypescriptComponent
+    TypescriptComponent,
+    NavbarComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

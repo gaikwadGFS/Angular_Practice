@@ -10,7 +10,7 @@ export class TypescriptComponent {
   // in javascript --> var a =0;
 
   // Variables start
-  name:string='Growing Flowers';
+  name:string;
 
   num:number=10;
 
@@ -35,6 +35,7 @@ export class TypescriptComponent {
 
 
   constructor(){
+    this.name= "Growing flower";
    this.callfunction();
    this.objectAccessing();
    this.arrayAccessing();
