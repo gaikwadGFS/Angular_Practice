@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class StudentComponent {
 
-<<<<<<< HEAD
   // result:number=0
 
   constructor(){
@@ -18,6 +17,4 @@ export class StudentComponent {
     let result = num*num ;
     console.log(result); 
   }
-=======
->>>>>>> 4423cf47ba256c32c73272d8d83c198dac849fa7
 }
