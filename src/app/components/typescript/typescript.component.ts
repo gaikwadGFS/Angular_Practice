@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-typescript',
@@ -34,7 +35,7 @@ export class TypescriptComponent {
 // Array Start
 
 
-  constructor(){
+  constructor(private route:Router){
     this.name= "Growing flower";
    this.callfunction();
    this.objectAccessing();
@@ -43,7 +44,7 @@ export class TypescriptComponent {
 //  Variable 
    display(){
     console.log("Display function executed..");
-
+   
      console.log("My name is " + this.name);
   }
 

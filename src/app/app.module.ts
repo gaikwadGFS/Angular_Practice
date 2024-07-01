@@ -8,6 +8,8 @@ import { TeacherComponent } from './components/teacher/teacher.component';
 import { TypescriptComponent } from './components/typescript/typescript.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     TeacherComponent,
     TypescriptComponent,
     NavbarComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
