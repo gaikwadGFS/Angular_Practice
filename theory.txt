@@ -1,0 +1,26 @@
+** Data Binding **
+
+Data binding is a core concept in Angular which allows us to bind data 
+from component.ts to .html and send data from .html to .ts.
+
+There are mainly two ways of Data Binding
+
+--One Way Data Binding
+
+1.From component to DOM
+   -Interpolation
+   -Property binding
+   
+2.From the DOM to the Component: Event binding
+   - (event)=”function”
+
+--Two Way Data Binding
+
+   -[(ngModel)]=”value”
+
+
+-----------------------------------------------------------------
+** Directive **
+Component Directives: Directives with a template, used to create UI components.
+Attribute Directives: Directives that change the appearance or behavior of an element.
+Structural Directives: Directives that change the DOM structure by adding or removing elements.

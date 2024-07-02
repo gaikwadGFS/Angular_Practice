@@ -6,6 +6,7 @@ import { TeacherComponent } from './components/teacher/teacher.component';
 import { TypescriptComponent } from './components/typescript/typescript.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LoginComponent } from './components/login/login.component';
+import { DataBindingComponent } from './components/data-binding/data-binding.component';
 
 const routes: Routes = [
   
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path:'typescript',
         component:TypescriptComponent
+      },
+      {
+        path:'databinding',
+        component:DataBindingComponent
       },
       {
         path:'**',

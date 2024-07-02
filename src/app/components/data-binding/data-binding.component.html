@@ -1,0 +1,54 @@
+
+<pre>
+    Topic Name : Data Binding
+
+    **** Data Binding ****
+    Two Types of data Binding
+    1. One way data Binding
+       1.a(.ts component to .html component)
+      --- Interpolation 
+      <!-- syantx--  {{varibale Name}} -->
+      --- Property Binding 
+        <!-- syantx--  [] -->
+        1.b(.html component to .ts component)
+        ---Event Binding
+           <!-- syantx-- (event)=”function” -->
+    2. Two way Data Binding
+</pre>
+<p>Interpolation</p>
+<h2>{{comapanyName}}</h2>
+
+<p>Property Binding</p>
+<img class="border border-5" [src]="imgageURL">
+
+<label>Enter Your Name:</label>
+<input type="text" name="name" [value]="comapanyName" [placeholder]="inputPlaceholder">
+
+<input class="mx-3" [type]="text" name="name" [value]="comapanyName" [placeholder]="inputPlaceholder">
+
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <div class="my-5">
+                <button type="button" class="btn btn-primary" (click)="showAlert()">Click Here To show Alert</button>
+            </div>
+        </div>
+        <div class="col-4">
+          <label>Enter Mobile Number</label>
+          <input type="text" name="mobno" [(ngModel)]="mobileNumber" placeholder="Enter number" class="form-control">
+        </div>
+        <div class="col-4">
+            <label>Enter City name</label>
+            <input type="text" name="city" [(ngModel)]="cityname" placeholder="Enter City" class="form-control">
+        </div>
+        <div class="col-2">
+            <div>
+                <button type="button" class="btn btn-warning" (click)="printConsole()">Print in Console</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
