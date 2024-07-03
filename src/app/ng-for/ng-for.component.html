@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let list of cityList">{{list}}</li>
+        </ul>
+    </div>
+    <div>
+        <ol>
+            <li *ngFor="let ol of cityList">{{ol}}</li>
+        </ol>
+    </div>
+</div>
+
+<p *ngFor="let city of cityList">{{city}}</p>
+
+<div *ngFor="let city of cityList">
+    {{city}}
+</div>
+
+<span *ngFor="let spanList of cityList" class="mx-2">{{spanList}}</span>
+
+<h3 *ngFor="let spanList of cityList">{{spanList}}</h3>
+
+
+<div class="row">
+    <div class="col-4">
+        <select name="opt" [(ngModel)]="dropdownValue" class="form-control">
+            <option >Select Option</option>
+            <option value="Maharashtra">hhdkzh</option>
+            <option value="Maharashtra123">jhjhsd</option>
+            <option value="Maharashtra567">dsjh</option>
+            <option value="Maharashtra908">jhdsj</option>
+        </select>
+        {{dropdownValue}}
+    </div>
+</div>

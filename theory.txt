@@ -21,6 +21,11 @@ There are mainly two ways of Data Binding
 
 -----------------------------------------------------------------
 ** Directive **
-Component Directives: Directives with a template, used to create UI components.
-Attribute Directives: Directives that change the appearance or behavior of an element.
-Structural Directives: Directives that change the DOM structure by adding or removing elements.
+3 types --
+1.Component Directives: Directives with a template, used to create UI components.
+
+2.Attribute Directives: Directives that change the appearance or behavior of an element.
+    ngClass, ngStyle 
+
+3.Structural Directives: Directives that change the DOM structure by adding or removing elements.
+   *ngIf --- Hide or show , *ngFor --- array display

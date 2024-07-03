@@ -11,6 +11,8 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { NgIfComponent } from './components/ng-if/ng-if.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
     NavbarComponent,
     ErrorPageComponent,
     LoginComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    NgIfComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,

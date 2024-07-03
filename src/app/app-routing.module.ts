@@ -7,6 +7,8 @@ import { TypescriptComponent } from './components/typescript/typescript.componen
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { NgIfComponent } from './components/ng-if/ng-if.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 const routes: Routes = [
   
@@ -41,6 +43,14 @@ const routes: Routes = [
       {
         path:'databinding',
         component:DataBindingComponent
+      },
+      {
+        path:'ng-if',
+        component:NgIfComponent
+      },
+      {
+        path:'ng-for',
+        component:NgForComponent
       },
       {
         path:'**',
