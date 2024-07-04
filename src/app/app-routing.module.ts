@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgClassComponent } from './components/ng-class/ng-class.component';
 
 const routes: Routes = [
   
@@ -51,6 +52,10 @@ const routes: Routes = [
       {
         path:'ng-for',
         component:NgForComponent
+      },
+      {
+        path:'ngClass',
+        component:NgClassComponent
       },
       {
         path:'**',

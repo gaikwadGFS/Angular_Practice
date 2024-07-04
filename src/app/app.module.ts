@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgClassComponent } from './components/ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     LoginComponent,
     DataBindingComponent,
     NgIfComponent,
-    NgForComponent
+    NgForComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-4">
+        <div class="p-4" [ngClass]="addColor">
+            Div 1
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="p-4" [ngClass]="uisngInputAddColor">
+            Div 2
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="p-4" [ngClass]="multipleBtnColor">
+            Div 3 --{{multipleBtnColor}}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <div>
+            <button type="button" class="btn btn-success" 
+            (click)="addGreenColor()">Add green</button>
+
+            <button type="button" class="btn btn-danger"
+             (click)="addRedColor()">Add Red</button>
+
+        </div>
+    </div>
+    <div class="col-4">
+        <div>
+            <input type="text" name="color" [(ngModel)]="uisngInputAddColor" 
+             placeholder="Enter Color name">
+        </div>
+    </div>
+    <div class="col-4">
+        <div>
+            <button type="button" class="btn btn-success" (click)="success()">Add</button>
+            <button type="button" class="btn btn-danger" (click)="danger()">Add</button>
+            <button type="button" class="btn btn-warning" (click)="warning()">Add</button>
+            <button type="button" class="btn btn-primary" (click)="primary()">Add</button>
+            <button type="button" class="btn btn-secondary" (click)="secondary()">Add</button>
+            <button type="button" class="btn btn-info" (click)="info()">Add</button>
+            <button type="button" class="btn btn-light" (click)="light()">Add</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Conditional ngClass -->
+<div class="row">
+    <div class="col-4">
+        <div class="p-4" [ngClass]="isActive == true ? 'bg-warning' : 'bg-info' ">
+            Div 4
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="p-4" [ngClass]="isCircle ? 'circle' : 'square' ">
+            div 5  -- {{isCircle}}
+        </div>
+    </div>
+</div>
+
+ <div class="row">
+    <div class="col-4">
+        <input type="checkbox" name="checkColor" [(ngModel)]="isActive">
+        {{isActive}}
+    </div>
+    <div class="col-4">
+        <button type="button"  class="btn btn-secondary" (click)="makeCircle()">Make Circle</button>
+        <button type="button"  class="btn btn-dark" (click)="makeSquare()">Make Square</button>
+    </div>
+ </div>
