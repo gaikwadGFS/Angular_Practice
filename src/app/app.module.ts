@@ -14,6 +14,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { NgStyleComponent } from './components/ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
     DataBindingComponent,
     NgIfComponent,
     NgForComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { NgStyleComponent } from './components/ng-style/ng-style.component';
 
 const routes: Routes = [
   
@@ -56,6 +57,10 @@ const routes: Routes = [
       {
         path:'ngClass',
         component:NgClassComponent
+      },
+      {
+        path:'ngStyle',
+        component:NgStyleComponent
       },
       {
         path:'**',

@@ -71,3 +71,64 @@
         <button type="button"  class="btn btn-dark" (click)="makeSquare()">Make Square</button>
     </div>
  </div>
+
+
+ <!-- Task -->
+
+ <!-- 1st senario -->
+  <!-- <div class="row">
+    <div class="col-4">
+        <div class="p-4 bg-info" (click)="showMobileCategory()">
+            Mobile
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-warning" (click)="showLaptopCategory()">
+             Laptop
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-secondary" (click)="showCameraCategory()">
+            Camera
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <div>
+            <div *ngIf="isMobile">Samsumg, Sony, Motorola, Micromax</div>
+            <div *ngIf="isLaptop">Sony, Lenovo, Hp, Acer</div>
+            <div *ngIf="isCamera">Sony, Philips</div>
+        </div>
+    </div>
+  </div> -->
+
+
+ <!-- 2nd senarioa -->
+
+  <div class="row">
+    <div class="col-4">
+        <div class="p-4 bg-info" (click)="showCategory('mobile')">
+            Mobile
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-warning" (click)="showCategory('laptop')">
+             Laptop
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-secondary" (click)="showCategory('camera')">
+            Camera
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <div class="text-center p-5">
+            <div *ngIf="isMobile">Samsumg, Sony, Motorola, Micromax</div>
+            <div *ngIf="isLaptop">Sony, Lenovo, Hp, Acer</div>
+            <div *ngIf="isCamera">Sony, Philips</div>
+        </div>
+    </div>
+  </div>

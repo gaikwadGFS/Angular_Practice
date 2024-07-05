@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-4">
+        <!-- Normal way Inline CSS -->
+        <div class="p-4" style="color: aqua; width: 100px; background-color: cadetblue;">
+            div1
+        </div>
+    </div>
+    <div class="col-4">
+        <!-- using Property Binding -->
+        <div class="p-4" [style.color]="myColor" [style.background-color]="bgColor" [style.width]="div1Width + '%'">
+            div1
+        </div>
+        <input type="color" name="color" [(ngModel)]="myColor">
+        {{myColor}}
+    </div>
+
+</div>
+<!-- Using ngStyle -->
+<div class="row">
+    <div class="col-4">
+        <div class="p-4" [ngStyle]="{'color':myColor , 
+        'background-color':bgColor,'width':div2Width,'height':div2Height}">
+            div 2
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="p-3" [ngStyle]="cssObj">
+            div 3
+        </div>
+    </div>
+
+</div>
+<!-- example -- Progress Bar -->
+<div class="row mt-5">
+    <div class="col-4">
+        <p>Normal Progress Bar</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width:70%">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <p>Uisng Property Binding Progress Bar</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" 
+            [style.width.%]="myProgress">
+
+            </div>
+        </div>
+        <input class="my-2" type="text" name="progress"
+         [(ngModel)]="myProgress">
+        {{myProgress}}
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar"
+             [ngStyle]="{'width':myProgress + '%'}">
+
+            </div>
+        </div>
+    </div>
+</div>
