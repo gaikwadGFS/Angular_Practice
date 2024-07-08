@@ -1,0 +1,55 @@
+
+
+<p class="my-5">{{person | json}}</p>
+<p>{{dateFormat}}</p>
+<h4>Date : {{dateFormat | date:'short' }}</h4>
+<h4>Date : {{dateFormat | date:'dd-MMM-yyyy' }}</h4>
+<h4>Date : {{dateFormat | date:'shortDate'}}</h4>
+<h4>Date : {{dateFormat | date:'shortDate'}}</h4>
+
+<h4>Date : {{dateFormat | date:'MMM d, y'}}</h4>
+
+<h4>Date : {{dateFormat | date:'EEEE, MMMM d, y'}}</h4>
+
+<p>{{nameInLower}}</p>
+<h5> Name : {{nameInLower | uppercase }}</h5>
+<h5> Name : {{nameInLower | titlecase }}</h5>
+
+
+<P>{{nameInUpper}}</P>
+<h5>Name : {{nameInUpper | lowercase}}</h5>
+
+<p>{{currencyPipe}}</p>
+<h5>Name : {{currencyPipe | currency:'INR'}}</h5>
+<h5>Name : {{currencyPipe | currency:'CAD'}}</h5>
+<h5>Name : {{currencyPipe | currency:'CLP'}}</h5>
+<h5>Name : {{currencyPipe | currency}}</h5>
+
+<div class="row my-5">
+    <div class="col-6">
+        <div class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Mobile No</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of personDetails">
+                    <td >{{list.id}}</td>
+                    <td >{{list.name | uppercase }}</td>
+                    <td >{{list.city | na:'NA'}}</td>
+                    <td >{{list.mobileNo | na:'-'}}</td>
+
+                </tr>
+            </tbody>
+        </div>
+    </div>
+</div>
+
+
+
+

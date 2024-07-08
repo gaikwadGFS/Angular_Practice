@@ -15,6 +15,10 @@ import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { NaPipe } from './pipes/na.pipe';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
     NgIfComponent,
     NgForComponent,
     NgClassComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    TasksComponent,
+    PipeComponent,
+    NaPipe
+    
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,153 @@
+<!-- Pannel Task -->
+<div class="row my-2">
+    <div class="col-7" [ngClass]=" isSidePanel ? 'col-7':'col-12'">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <div class="d-flex justify-content-between">
+                    <h4>Main</h4>
+                    <button type="button" class="btn btn-secondary" (click)="isSidePanel =! isSidePanel"> Add</button>
+                </div>
+            </div>
+            <div class="card-body">
+
+            </div>
+
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-5" *ngIf="isSidePanel" >
+        <div class="card">
+            <div class="card-header bg-primary">
+                <div class="d-flex justify-content-between">
+                    <h4>Side</h4>
+                    <button type="button" class="btn btn-secondary" (click)="isSidePanel =!isSidePanel">Close</button>
+                </div>
+            </div>
+            <div class="card-body">
+
+            </div>
+
+            <div class="card-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ <!--Div Selection Task -->
+
+ <!-- 1st senario -->
+  <!-- <div class="row">
+    <div class="col-4">
+        <div class="p-4 bg-info" (click)="showMobileCategory()">
+            Mobile
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-warning" (click)="showLaptopCategory()">
+             Laptop
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-secondary" (click)="showCameraCategory()">
+            Camera
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <div>
+            <div *ngIf="isMobile">Samsumg, Sony, Motorola, Micromax</div>
+            <div *ngIf="isLaptop">Sony, Lenovo, Hp, Acer</div>
+            <div *ngIf="isCamera">Sony, Philips</div>
+        </div>
+    </div>
+  </div> -->
+
+
+ <!-- 2nd senarioa -->
+
+ <div class="row">
+    <div class="col-4">
+        <div class="p-4 bg-info" (click)="showCategory('mobile')">
+            Mobile
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-warning" (click)="showCategory('laptop')">
+             Laptop
+        </div>
+    </div>
+    <div class="col-4">
+        <div  class="p-4 bg-secondary" (click)="showCategory('camera')">
+            Camera
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+        <div class="text-center p-5">
+            <div *ngIf="isMobile">Samsumg, Sony, Motorola, Micromax</div>
+            <div *ngIf="isLaptop">Sony, Lenovo, Hp, Acer</div>
+            <div *ngIf="isCamera">Sony, Philips</div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Toggle task -->
+
+  <div class="row my-3 mb-5">
+    <div class="col-4">
+        <div class="p-5" [ngClass]="toggle ? 'bg-primary' : 'bg-warning' ">
+            Toggle Div
+        </div>
+        <button type="button" class="btn btn-success" (click)="toggleDiv()">Toggle</button>
+    </div>
+  </div>
+
+  <!-- Train Booking -->
+   <div class="row my-5">
+    <div class="col-12">
+        <div class="card p-4">
+            <div class="row">
+         <div class="col-4">
+            <label for="">Journey Date</label>
+            <input type="date" name="date"  class="form-control my-2" [(ngModel)]="journeyDate">
+         </div>
+         <div class="col-4">
+            <label for="">From Station</label>
+            <select name="from" class="form-select my-2" [(ngModel)]="selectFromStation">
+                <option [value]="station" *ngFor="let station of fromStation">{{station}}</option>
+            </select>
+         </div>
+         <div class="col-4">
+            <label for="">To Station</label>
+            <select name="to" class="form-select my-2" [(ngModel)]="selectToStation">
+                <option value="{{station}}" *ngFor="let station of toStation">{{station}}</option>
+            </select>
+         </div>
+         <div class="col-12">
+            <div class="p-5 text-center">
+                <button type="button" class="btn btn-primary mx-3" (click)="searchTrain()">Search</button>
+                <button type="button" class="btn btn-primary" (click)="clear()">Clear</button>
+    
+            </div>
+        </div>
+        <div class="col-12" >
+            <div class="bg-light text-dark p-5" *ngIf="isDisplay">
+                <p>You Have Searched For</p>
+                   <h5>Journey Date : {{journeyDate}}</h5>
+                   <h5>From  : {{selectFromStation}}</h5>
+                   <h5>To : {{selectToStation}}</h5>
+            </div>
+        </div>
+            </div>
+          
+        </div>
+    </div>
+   
+   </div>

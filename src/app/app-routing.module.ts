@@ -11,6 +11,8 @@ import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 const routes: Routes = [
   
@@ -61,6 +63,14 @@ const routes: Routes = [
       {
         path:'ngStyle',
         component:NgStyleComponent
+      },
+      {
+        path:'tasks',
+        component:TasksComponent
+      },
+      {
+        path:'pipe',
+        component:PipeComponent
       },
       {
         path:'**',
