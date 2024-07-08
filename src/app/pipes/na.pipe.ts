@@ -13,5 +13,13 @@ export class NaPipe implements PipeTransform {
      return value;
     
   }
-
+  // or
+  // transform(value: any, ...args: unknown[]): unknown {
+        
+  //   if(value === null || value === undefined || value === ''){
+  //     return 'NA';
+  //   }
+  //    return value;
+    
+  // }
 }
