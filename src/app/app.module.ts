@@ -19,6 +19,9 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { NaPipe } from './pipes/na.pipe';
 
+import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -36,13 +39,16 @@ import { NaPipe } from './pipes/na.pipe';
     NgStyleComponent,
     TasksComponent,
     PipeComponent,
-    NaPipe
+    NaPipe,
+    TemplateFormComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

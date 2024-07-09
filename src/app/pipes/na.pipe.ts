@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'na'
+  name: 'notApp'
 })
 export class NaPipe implements PipeTransform {
 

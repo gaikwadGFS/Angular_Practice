@@ -13,6 +13,7 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
 
 const routes: Routes = [
   
@@ -71,6 +72,10 @@ const routes: Routes = [
       {
         path:'pipe',
         component:PipeComponent
+      },
+      {
+        path:'templateForm',
+        component:TemplateFormComponent
       },
       {
         path:'**',

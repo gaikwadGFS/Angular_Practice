@@ -26,6 +26,12 @@ export class TasksComponent {
 
   isDisplay:boolean=false;
 
+ 
+
+  constructor(){
+    
+  }
+
   // 1st senario
   // showMobileCategory(){
   //   this.isMobile=true;
@@ -105,5 +111,9 @@ export class TasksComponent {
     this.journeyDate=new Date();
     this.isDisplay=false;
   }
+  
+ 
+
+ 
   
 }

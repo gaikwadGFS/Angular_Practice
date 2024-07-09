@@ -40,9 +40,9 @@
             <tbody>
                 <tr *ngFor="let list of personDetails">
                     <td >{{list.id}}</td>
-                    <td >{{list.name | uppercase }}</td>
-                    <td >{{list.city | na:'NA'}}</td>
-                    <td >{{list.mobileNo | na:'-'}}</td>
+                    <td >{{list.name | uppercase | notApp:'-------' }}</td>
+                    <td >{{list.city | notApp:'This is Empty col'}}</td>
+                    <td >{{list.mobileNo | notApp:'-'}}</td>
 
                 </tr>
             </tbody>

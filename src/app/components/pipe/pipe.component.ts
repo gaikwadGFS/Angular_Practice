@@ -31,7 +31,7 @@ export class PipeComponent {
     },
     {
       id:2,
-      name:'bhushan',
+      name:'',
       city:'pune',
       mobileNo:'9876567898'
     },
