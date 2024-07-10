@@ -8,6 +8,7 @@
                     <th>Name</th>
                     <th>User Name</th>
                     <th>Email</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,6 +17,12 @@
                     <td>{{details.name}}</td>
                     <td>{{details.username}}</td>
                     <td>{{details.email}}</td>
+                    <td>
+                        <div class="d-flex">
+                        <button type="button" class="btn btn-primary" (click)="editRecord(details.id)">Edit</button>
+                        <button type="button" class="btn btn-danger" (click)="deleteRecord(details.id)">Delete</button>
+                    </div>
+                    </td>
 
                 </tr>
             </tbody>
@@ -40,7 +47,9 @@
                   </div>
                   <div class="col-12">
                     <div class="text-center">
-                        <button type="button" class="btn btn-primary mx-2" (click)="saveRecord()">Save</button>
+                        <button type="button" class="btn btn-primary mx-2" *ngIf="studentDetailsObj.id == 0" (click)="saveRecord()">Save {{studentDetailsObj.id}}</button>
+                        <button type="button" class="btn btn-success mx-2" *ngIf="studentDetailsObj.id != 0"  (click)="updateRecord(studentDetailsObj)">Update {{studentDetailsObj.id}}</button>
+
                         <button type="button" class="btn btn-danger" (click)="reset()">Reset</button>
 
                     </div>

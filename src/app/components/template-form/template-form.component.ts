@@ -79,4 +79,34 @@ export class TemplateFormComponent {
       }
     }
   }
+
+  editRecord(id:number){
+    // alert("ID:"+id);
+    this.http.get("https://jsonplaceholder.typicode.com/users/"+id).subscribe((res:any)=>{
+    console.log(res);
+    this.studentDetailsObj=res;
+    })
+  }
+
+  updateRecord(studRecord:any){
+    console.log(studRecord);
+    this.http.post("https://jsonplaceholder.typicode.com/users/",studRecord).subscribe((result:any)=>{
+      console.log("update Result:"+JSON.stringify(result));
+      alert("Updated Successfully");
+      this.reset();
+      this.loadStudentDetails();
+    })
+
+  }
+  deleteRecord(deleteId:number){
+    // alert(deleteId);
+    const confirm = window.confirm("Are You Sure..?");
+    if(confirm){
+      this.http.delete("https://jsonplaceholder.typicode.com/users/"+deleteId).subscribe((result:any)=>{
+        alert("Deleted Success");
+        this.loadStudentDetails();  
+      })
+    }
+      
+  }
 }
