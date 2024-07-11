@@ -21,6 +21,7 @@ import { NaPipe } from './pipes/na.pipe';
 
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ValidationComponent } from './components/validation/validation.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     TasksComponent,
     PipeComponent,
     NaPipe,
-    TemplateFormComponent
+    TemplateFormComponent,
+    ValidationComponent
     
   ],
   imports: [

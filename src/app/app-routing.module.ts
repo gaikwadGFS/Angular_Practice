@@ -14,6 +14,7 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { ValidationComponent } from './components/validation/validation.component';
 
 const routes: Routes = [
   
@@ -76,6 +77,10 @@ const routes: Routes = [
       {
         path:'templateForm',
         component:TemplateFormComponent
+      },
+      {
+        path:'validation',
+        component:ValidationComponent
       },
       {
         path:'**',
