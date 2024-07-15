@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../Services/users/user.service';
 
 @Component({
   selector: 'app-teacher',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class TeacherComponent {
 
-  
+  constructor(private userServices:UserService){
+    this.getYear();
+  }
+ 
+  getYear(){
+   
+    this.userServices.getFullYear();
+  }
+
 
 }

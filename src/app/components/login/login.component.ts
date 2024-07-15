@@ -34,5 +34,10 @@ export class LoginComponent {
       alert("Your Login Credientails wrong ... please try again...!!!");
      }
   }
+  fullYear(){
+    const year= new Date();
+    const currentYear= year.getFullYear();
+    console.log(currentYear);
+  }
 
 }

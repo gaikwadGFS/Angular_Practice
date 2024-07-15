@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../../Services/users/user.service';
 
 @Component({
   selector: 'app-typescript',
@@ -35,11 +36,12 @@ export class TypescriptComponent {
 // Array Start
 
 
-  constructor(private route:Router){
+  constructor(private route:Router,private userService:UserService){
     this.name= "Growing flower";
    this.callfunction();
    this.objectAccessing();
    this.arrayAccessing();
+   this.userService.getFullYear();
   }
 //  Variable 
    display(){

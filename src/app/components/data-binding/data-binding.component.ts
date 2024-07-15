@@ -20,7 +20,7 @@ export class DataBindingComponent {
 
        constructor(){
         console.log(this.comapanyName);
-      
+        this.fullYear();
       }
 
       showAlert(){
@@ -29,5 +29,12 @@ export class DataBindingComponent {
 
       printConsole(){
         console.log("Mobile Number is  " + this.mobileNumber + "," + "City Name is  " + this.cityname);
+
+      }
+
+      fullYear(){
+        const year= new Date();
+        const currentYear= year.getFullYear();
+        console.log(currentYear);
       }
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { UserService } from '../../Services/users/user.service';
 
 @Component({
   selector: 'app-template-form',
@@ -34,24 +35,39 @@ export class TemplateFormComponent {
 
   studentDetailsArray:any[]=[];
 
-  constructor(private http:HttpClient){
+  constructor(private http:HttpClient,private userSrv:UserService){
   this.loadStudentDetails();
   }
 
+  // loadStudentDetails(){
+  //   this.http.get("https://jsonplaceholder.typicode.com/AllUser").subscribe((result:any)=>{
+  //     console.log(result);
+  //     this.studentDetailsArray=result;
+  //   });
+  // }
+
   loadStudentDetails(){
-    this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((result:any)=>{
-      console.log(result);
-      this.studentDetailsArray=result;
-    });
+  this.userSrv.getAllUsers().subscribe((result:any)=>{
+    this.studentDetailsArray=result;
+  
+  })
   }
 
-  saveRecord(){
-    this.http.post("https://jsonplaceholder.typicode.com/users",this.studentDetailsObj).subscribe((result:any)=>{
-        alert("Your data Successfully Saved....!"+ JSON.stringify(result));
-        this.loadStudentDetails();
-        this.reset();
-      });
+  // saveRecord(){
+  //   this.http.post("https://jsonplaceholder.typicode.com/users",this.studentDetailsObj).subscribe((result:any)=>{
+  //       alert("Your data Successfully Saved....!"+ JSON.stringify(result));
+  //       this.loadStudentDetails();
+  //       this.reset();
+  //     });
     
+  // }
+
+  saveRecord(){
+    this.userSrv.createUser(this.studentDetailsObj).subscribe((result:any)=>{
+             alert("Your data Successfully Saved....!"+ JSON.stringify(result));
+           this.loadStudentDetails();
+             this.reset();
+         });
   }
 
   reset(){
