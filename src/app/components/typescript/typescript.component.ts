@@ -12,9 +12,9 @@ export class TypescriptComponent {
   // in javascript --> var a =0;
 
   // Variables start
-  name:string;
+ public name:string;
 
-  num:number=10;
+ public num:number=10;
 
   isActive:boolean=false;
 

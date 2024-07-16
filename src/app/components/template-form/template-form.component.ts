@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { UserService } from '../../Services/users/user.service';
+import { userClass } from '../../Core/classes/user';
+import { userInterface } from '../../Core/interfaces/user';
 
 @Component({
   selector: 'app-template-form',
@@ -9,31 +11,35 @@ import { UserService } from '../../Services/users/user.service';
 })
 export class TemplateFormComponent {
 
-  studentDetailsObj:any={
-    id: 0,
-    name: "",
-    username: "",
-    email: "",
-    address: {
-      street: "",
-      suite: "",
-      city: "",
-      zipcode: "",
-      geo: {
-        lat: "",
-        lng: ""
-      }
-    },
-    phone: "",
-    website: "",
-    company: {
-      name: "",
-      catchPhrase: "",
-      bs: ""
-    }
-  }
+  // studentDetailsObj:any={
+  //   id: 0,
+  //   name: "",
+  //   username: "",
+  //   email: "",
+  //   address: {
+  //     street: "",
+  //     suite: "",
+  //     city: "",
+  //     zipcode: "",
+  //     geo: {
+  //       lat: "",
+  //       lng: ""
+  //     }
+  //   },
+  //   phone: "",
+  //   website: "",
+  //   company: {
+  //     name: "",
+  //     catchPhrase: "",
+  //     bs: ""
+  //   }
+  // }
 
-  studentDetailsArray:any[]=[];
+ 
+
+  public studentDetailsObj:userClass = new userClass();
+
+  public  studentDetailsArray:userInterface[]=[];
 
   constructor(private http:HttpClient,private userSrv:UserService){
   this.loadStudentDetails();
@@ -48,6 +54,7 @@ export class TemplateFormComponent {
 
   loadStudentDetails(){
   this.userSrv.getAllUsers().subscribe((result:any)=>{
+    console.log(result);
     this.studentDetailsArray=result;
   
   })
@@ -80,7 +87,7 @@ export class TemplateFormComponent {
         street: "",
         suite: "",
         city: "",
-        zipcode: "",
+        zipcode: 0,
         geo: {
           lat: "",
           lng: ""
