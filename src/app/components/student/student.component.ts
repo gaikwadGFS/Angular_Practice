@@ -10,7 +10,7 @@ import { UserService } from '../../Services/users/user.service';
 export class StudentComponent {
 
   // result:number=0
-
+   welcomeMsg:string="Welcome to Student page"
 
   studentDetailsObj:any={
     id: 0,

@@ -35,7 +35,7 @@ export class TemplateFormComponent {
   //   }
   // }
 
- 
+   columns:any[]=['name','email','username'] 
 
   public studentDetailsObj:userClass = new userClass();
 

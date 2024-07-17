@@ -22,6 +22,8 @@ import { NaPipe } from './pipes/na.pipe';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ValidationComponent } from './components/validation/validation.component';
+import { AlertBoxComponent } from './ResusableComponent/alert-box/alert-box.component';
+import { TableComponent } from './ResusableComponent/table/table.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { ValidationComponent } from './components/validation/validation.componen
     PipeComponent,
     NaPipe,
     TemplateFormComponent,
-    ValidationComponent
+    ValidationComponent,
+    AlertBoxComponent,
+    TableComponent
     
   ],
   imports: [

@@ -29,3 +29,17 @@ There are mainly two ways of Data Binding
 
 3.Structural Directives: Directives that change the DOM structure by adding or removing elements.
    *ngIf --- Hide or show , *ngFor --- array display
+
+
+-----------------------------------------------------------------------------------------
+Decorators
+
+Purpose of Angular decorators is to store metadata about a class, method, or property 
+It informs angular how to process class or method.
+
+There are several type of Decorators as below
+
+Class Decorators - @component,@pipe,@Injectable,@Modules,@Directive
+Method Decorators - @Hostlistners
+Property Decorators - @Input, @Output
+Parameter Decorators - @Inject

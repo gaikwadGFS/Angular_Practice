@@ -1,33 +1,10 @@
 <div class="row">
     <div class="col-8">
        <div class="card">
-        <div class="table">
-            <thead>
-                <tr>
-                    <th>Sr.no</th>
-                    <th>Name</th>
-                    <th>User Name</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let details of studentDetailsArray; let sr =index">
-                    <td>{{sr+1}}</td>
-                    <td>{{details.name}}</td>
-                    <td>{{details.username}}</td>
-                    <td>{{details.email}}</td>
-                    <td>
-                        <div class="d-flex">
-                        <button type="button" class="btn btn-primary" (click)="editRecord(details.id)">Edit</button>
-                        <button type="button" class="btn btn-danger" (click)="deleteRecord(details.id)">Delete</button>
-                    </div>
-                    </td>
+    
+        <app-table [columnData]="['name','email','username']" [tableData]="studentDetailsArray"></app-table>
 
-                </tr>
-            </tbody>
-        </div>
-       </div>
+    </div>
     </div>
     <div class="col-4">
          <form action="">
