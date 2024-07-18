@@ -103,9 +103,10 @@ export class TemplateFormComponent {
     }
   }
 
-  editRecord(id:number){
+  editRecord(list:any){
+    debugger;
     // alert("ID:"+id);
-    this.http.get("https://jsonplaceholder.typicode.com/users/"+id).subscribe((res:any)=>{
+    this.http.get("https://jsonplaceholder.typicode.com/users/"+list.id).subscribe((res:any)=>{
     console.log(res);
     this.studentDetailsObj=res;
     })
@@ -121,11 +122,12 @@ export class TemplateFormComponent {
     })
 
   }
-  deleteRecord(deleteId:number){
+  deleteRecord(record:any){
+    debugger;
     // alert(deleteId);
     const confirm = window.confirm("Are You Sure..?");
     if(confirm){
-      this.http.delete("https://jsonplaceholder.typicode.com/users/"+deleteId).subscribe((result:any)=>{
+      this.http.delete("https://jsonplaceholder.typicode.com/users/"+record.id).subscribe((result:any)=>{
         alert("Deleted Success");
         this.loadStudentDetails();  
       })

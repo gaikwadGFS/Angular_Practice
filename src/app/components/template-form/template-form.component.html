@@ -2,7 +2,9 @@
     <div class="col-8">
        <div class="card">
     
-        <app-table [columnData]="['name','email','username']" [tableData]="studentDetailsArray"></app-table>
+        <app-table [columnData]="['name','email','username','Action']"
+         (edit)="editRecord($event)" (delete)="deleteRecord($event)"
+        [tableData]="studentDetailsArray"></app-table>
 
     </div>
     </div>

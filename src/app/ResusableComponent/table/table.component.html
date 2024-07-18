@@ -10,7 +10,17 @@
     <tbody>
         <tr *ngFor="let data of tableData ;let sr=index" >
             <td>{{sr+1}}</td>
-            <td *ngFor="let column of columnData"> {{data[column]}}</td>       
+            <td *ngFor="let column of columnData">
+                <div *ngIf="column == 'Action'">
+                    <button type="button" class="btn btn-sm btn-success" (click)="onEdit(data)">Edit</button>
+                    <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(data)">Delete</button>
+
+                </div>
+                <div *ngIf="column !== 'Action'">
+                    {{data[column]}}
+                </div>
+               
+            </td>       
         </tr>
     </tbody>
 </div>
