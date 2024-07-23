@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ValidationComponent } from './components/validation/validation.component';
 import { AlertBoxComponent } from './ResusableComponent/alert-box/alert-box.component';
 import { TableComponent } from './ResusableComponent/table/table.component';
+import { HightlightMeDirective } from './Directives/Highlight/hightlight-me.directive';
+import { CustomDirectiveComponent } from './components/custom-directive/custom-directive.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { TableComponent } from './ResusableComponent/table/table.component';
     TemplateFormComponent,
     ValidationComponent,
     AlertBoxComponent,
-    TableComponent
+    TableComponent,
+    HightlightMeDirective,
+    CustomDirectiveComponent
     
   ],
   imports: [

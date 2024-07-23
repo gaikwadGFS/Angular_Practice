@@ -15,6 +15,7 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ValidationComponent } from './components/validation/validation.component';
+import { CustomDirectiveComponent } from './components/custom-directive/custom-directive.component';
 
 const routes: Routes = [
   
@@ -81,6 +82,10 @@ const routes: Routes = [
       {
         path:'validation',
         component:ValidationComponent
+      },
+      {
+        path:'customDirective',
+        component:CustomDirectiveComponent
       },
       {
         path:'**',
