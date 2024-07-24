@@ -16,6 +16,8 @@ import { PipeComponent } from './components/pipe/pipe.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ValidationComponent } from './components/validation/validation.component';
 import { CustomDirectiveComponent } from './components/custom-directive/custom-directive.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { RegisteredDataComponent } from './components/registered-data/registered-data.component';
 
 const routes: Routes = [
   
@@ -86,6 +88,18 @@ const routes: Routes = [
       {
         path:'customDirective',
         component:CustomDirectiveComponent
+      },
+      {
+        path:'registerForm',
+        component:RegisterFormComponent
+      },
+      {
+        path:'registerForm/:id',
+        component:RegisterFormComponent
+      },
+      {
+        path:'registerData',
+        component:RegisteredDataComponent
       },
       {
         path:'**',

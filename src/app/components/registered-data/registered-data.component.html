@@ -1,0 +1,27 @@
+<div class="container">
+    <table class="table table-bordered">
+         <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Education</th>
+                <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let data of registerArray;let sr=index">
+                <td>{{sr+1}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.city}}</td>
+                <td>{{data.education}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary" (click)="editRecord(data.id)">Edit</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteRecord(data.id)">Delete</button>
+                </td>
+            </tr>
+         </tbody>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card p-5 shadow">
+                <form>
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="name" [(ngModel)]="registerObj.name">
+                        </div>
+                        <div class="col-6">
+                            <label>Email</label>
+                            <input type="text" class="form-control" name="Email" [(ngModel)]="registerObj.email">
+                        </div>
+                        <div class="col-6">
+                            <label>City</label>
+                            <input type="text" class="form-control" name="City" [(ngModel)]="registerObj.city">
+                        </div>
+                        <div class="col-6">
+                            <label>Number</label>
+                            <input type="text" class="form-control" name="Number" [(ngModel)]="registerObj.number" >
+                        </div>
+                        <div class="col-6">
+                            <label> About Education</label>
+                          <textarea name="education" class="form-control" [(ngModel)]="registerObj.education" ></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="mt-5">
+                                <button type="button " class="btn btn-success" *ngIf="currentId == 0" (click)="register()">Register</button>
+                                <button type="button " class="btn btn-success"  *ngIf="currentId != 0" (click)="update()">Update</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
