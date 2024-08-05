@@ -7,9 +7,13 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  apiURL:string="https://jsonplaceholder.typicode.com/";
   
-  constructor(private http:HttpClient) { }
+  
+  apiURL:string = "http://localhost:3000/users";
+
+  constructor(
+    private http:HttpClient
+  ) { }
 
     getFullYear():Number{
       const year = new Date();
@@ -18,11 +22,22 @@ export class UserService {
     }
 
     getAllUsers():Observable<any>{
-     return this.http.get(this.apiURL+"users");
+     return this.http.get(this.apiURL);
     }
 
     createUser(object:any):Observable<any>{
-      return this.http.post(this.apiURL+"users",object);
+      return this.http.post(this.apiURL,object);
+    }
+
+    getUserById(id: number){
+      return this.http.get<any>(`${this.apiURL}/${id}`);
+    }
+
+    updateUser(record: any): Observable<any> {
+      return this.http.put<any>(`${this.apiURL}/${record.id}`, record);
     }
    
+    deleteUser(id: number){
+      return this.http.delete(`${this.apiURL}/${id}`)
+    }
 }

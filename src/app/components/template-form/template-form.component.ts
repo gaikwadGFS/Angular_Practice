@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../Services/users/user.service';
 import { userClass } from '../../Core/classes/user';
 import { userInterface } from '../../Core/interfaces/user';
@@ -9,7 +9,7 @@ import { userInterface } from '../../Core/interfaces/user';
   templateUrl: './template-form.component.html',
   styleUrl: './template-form.component.css'
 })
-export class TemplateFormComponent {
+export class TemplateFormComponent implements OnInit {
 
   // studentDetailsObj:any={
   //   id: 0,
@@ -42,9 +42,12 @@ export class TemplateFormComponent {
   public  studentDetailsArray:userInterface[]=[];
 
   constructor(private http:HttpClient,private userSrv:UserService){
-  this.loadStudentDetails();
+  
   }
 
+  ngOnInit(){
+    this.loadStudentDetails();
+  }
   // loadStudentDetails(){
   //   this.http.get("https://jsonplaceholder.typicode.com/AllUser").subscribe((result:any)=>{
   //     console.log(result);
@@ -53,11 +56,12 @@ export class TemplateFormComponent {
   // }
 
   loadStudentDetails(){
+
   this.userSrv.getAllUsers().subscribe((result:any)=>{
     console.log(result);
     this.studentDetailsArray=result;
   
-  })
+  });
   }
 
   // saveRecord(){
@@ -106,20 +110,32 @@ export class TemplateFormComponent {
   editRecord(list:any){
     debugger;
     // alert("ID:"+id);
-    this.http.get("https://jsonplaceholder.typicode.com/users/"+list.id).subscribe((res:any)=>{
-    console.log(res);
-    this.studentDetailsObj=res;
+    this.userSrv.getUserById(list.id).subscribe((data) => {
+      console.log(data)
+      this.studentDetailsObj=data;
     })
+    // this.http.get("https://jsonplaceholder.typicode.com/users/"+list.id).subscribe((res:any)=>{
+    // console.log(res);
+    // this.studentDetailsObj=res;
+    // })
   }
 
   updateRecord(studRecord:any){
     console.log(studRecord);
-    this.http.post("https://jsonplaceholder.typicode.com/users/",studRecord).subscribe((result:any)=>{
-      console.log("update Result:"+JSON.stringify(result));
-      alert("Updated Successfully");
-      this.reset();
-      this.loadStudentDetails();
+
+    this.userSrv.updateUser(studRecord).subscribe((data) => {
+      console.log("update Result:"+JSON.stringify(data));
+        alert("Updated Successfully");
+        this.reset();
+        this.loadStudentDetails();
     })
+
+    // this.http.post("https://jsonplaceholder.typicode.com/users/",studRecord).subscribe((result:any)=>{
+    //   console.log("update Result:"+JSON.stringify(result));
+    //   alert("Updated Successfully");
+    //   this.reset();
+    //   this.loadStudentDetails();
+    // })
 
   }
   deleteRecord(record:any){
@@ -127,10 +143,15 @@ export class TemplateFormComponent {
     // alert(deleteId);
     const confirm = window.confirm("Are You Sure..?");
     if(confirm){
-      this.http.delete("https://jsonplaceholder.typicode.com/users/"+record.id).subscribe((result:any)=>{
+      this.userSrv.deleteUser(record.id).subscribe((result:any) => {
         alert("Deleted Success");
         this.loadStudentDetails();  
-      })
+      });
+
+      // this.http.delete("https://jsonplaceholder.typicode.com/users/"+record.id).subscribe((result:any)=>{
+      //   alert("Deleted Success");
+      //   this.loadStudentDetails();  
+      // })
     }
       
   }

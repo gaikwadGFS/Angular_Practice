@@ -28,6 +28,7 @@ export class RegisterFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
     const localData = localStorage.getItem('data');
     if(localData !== null){
       this.registerArray=JSON.parse(localData);
@@ -39,6 +40,7 @@ export class RegisterFormComponent implements OnInit {
       }
     }
   }
+
   register(){
     const localData= localStorage.getItem('data');
     if(localData == null){
