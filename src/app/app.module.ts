@@ -28,6 +28,7 @@ import { HightlightMeDirective } from './Directives/Highlight/hightlight-me.dire
 import { CustomDirectiveComponent } from './components/custom-directive/custom-directive.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisteredDataComponent } from './components/registered-data/registered-data.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { RegisteredDataComponent } from './components/registered-data/registered
     HightlightMeDirective,
     CustomDirectiveComponent,
     RegisterFormComponent,
-    RegisteredDataComponent
+    RegisteredDataComponent,
+    LoaderComponent
     
   ],
   imports: [

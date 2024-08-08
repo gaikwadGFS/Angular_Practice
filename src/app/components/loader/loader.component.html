@@ -1,0 +1,66 @@
+<div class="container">
+    <table class="table table-bordered">
+         <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+
+            <ng-container *ngIf="!isLoader">
+                <tr class="text-center my-5">
+                    <td colspan="5" >
+                       <h1>Loading</h1>
+                        <!-- <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div> -->
+                          
+                    </td>
+                </tr>
+                
+                  
+            </ng-container>
+             
+            <ng-container *ngIf="isLoader">
+                <tr *ngFor="let data of studentDetailsArray;let sr=index">
+                    <td>{{sr+1}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.username}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="editRecord(data.id)">Edit</button>
+                        <button type="button" class="btn btn-danger" (click)="deleteRecord(data.id)">Delete</button>
+                    </td>
+                </tr>
+            </ng-container>
+
+            
+         </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="studentDetailsObj.name">
+        </div>
+        <div class="col-6">
+            <input type="text" name="name" class="form-control" placeholder="Email" [(ngModel)]="studentDetailsObj.email">
+        </div>
+        <div class="col-6">
+            <input type="text" name="name" class="form-control" placeholder="Username" [(ngModel)]="studentDetailsObj.username">
+        </div>
+        <div class="col-12">
+           <div>
+            <button type="button" class="btn btn-primary" (click)="saveRecord()">
+                <div class="spinner-grow spinner-grow-sm" role="status" *ngIf="isAPICall">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                Save</button>
+           </div>
+        </div>
+    </div>
+</div>
