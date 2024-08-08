@@ -26,8 +26,8 @@ export class UserService {
     }
 
     createUser(object:any):Observable<any>{
-      const { id ,...list} =object;
-      return this.http.post(this.apiURL,list);
+      // const { id ,...list} =object;
+      return this.http.post(this.apiURL,object);
     }
 
     getUserById(id: number){

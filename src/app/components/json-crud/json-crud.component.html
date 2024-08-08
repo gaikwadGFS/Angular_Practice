@@ -40,7 +40,7 @@
                     <div class="col-12">
                         <div>
                             <button type="submit" class="btn btn-primary" *ngIf="!userForm.get('id')?.value" >Save</button>
-                            <button type="submit" class="btn btn-primary" *ngIf="userForm.get('id')?.value"  (click)="update()">Update</button>
+                            <button type="button" class="btn btn-primary" *ngIf="userForm.get('id')?.value"  (click)="update()">Update</button>
 
                         </div>
                     </div>
