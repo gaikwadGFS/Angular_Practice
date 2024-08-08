@@ -19,6 +19,7 @@ import { CustomDirectiveComponent } from './components/custom-directive/custom-d
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisteredDataComponent } from './components/registered-data/registered-data.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { JsonCRUDComponent } from './components/json-crud/json-crud.component';
 
 const routes: Routes = [
   
@@ -105,6 +106,10 @@ const routes: Routes = [
       {
         path:'loader',
         component:LoaderComponent
+      },
+      {
+        path:'jsonCRUD',
+        component:JsonCRUDComponent
       },
       {
         path:'**',

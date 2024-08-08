@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8">
+            <div class="table">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>ACtions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let list of usersArray;let sr=index">
+                        <td>{{sr+1}}</td>
+                        <td>{{list.name}}</td>
+                        <td>{{list.email}}</td>
+                        <td>
+                            <button type="button" class="btn btn-info" (click)="edit(list.id)">Edit</button>
+                            <button type="button" class="btn btn-danger" (click)="delete(list.id)">Delete</button>
+
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </div>
+        </div>
+        <div class="col-4">
+            <form [formGroup]="userForm" (ngSubmit)="saveUser()">
+                <div class="row">
+                    <div class="col-6">
+                     <label>Name</label>
+                     <input type="text" name="name" class="form-control" formControlName="name">
+                    </div>
+                    <div class="col-6">
+                        <label>Email</label>
+                        <input type="text" name="email" class="form-control" formControlName="email">
+                    </div>
+                    <div class="col-12">
+                        <div>
+                            <button type="submit" class="btn btn-primary" *ngIf="!userForm.get('id')?.value" >Save</button>
+                            <button type="submit" class="btn btn-primary" *ngIf="userForm.get('id')?.value"  (click)="update()">Update</button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

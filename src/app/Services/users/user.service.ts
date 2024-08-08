@@ -26,7 +26,8 @@ export class UserService {
     }
 
     createUser(object:any):Observable<any>{
-      return this.http.post(this.apiURL,object);
+      const { id ,...list} =object;
+      return this.http.post(this.apiURL,list);
     }
 
     getUserById(id: number){
@@ -34,7 +35,9 @@ export class UserService {
     }
 
     updateUser(record: any): Observable<any> {
-      return this.http.put<any>(`${this.apiURL}/${record.id}`, record);
+      const { id ,...list} =record;
+
+      return this.http.put<any>(`${this.apiURL}/${record.id}`, list);
     }
    
     deleteUser(id: number){

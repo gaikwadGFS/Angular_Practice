@@ -9,7 +9,7 @@ import { TypescriptComponent } from './components/typescript/typescript.componen
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LoginComponent } from './components/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { NgIfComponent } from './components/ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
@@ -29,6 +29,7 @@ import { CustomDirectiveComponent } from './components/custom-directive/custom-d
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisteredDataComponent } from './components/registered-data/registered-data.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { JsonCRUDComponent } from './components/json-crud/json-crud.component';
 
 
 @NgModule({
@@ -56,14 +57,16 @@ import { LoaderComponent } from './components/loader/loader.component';
     CustomDirectiveComponent,
     RegisterFormComponent,
     RegisteredDataComponent,
-    LoaderComponent
+    LoaderComponent,
+    JsonCRUDComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
